@@ -163,7 +163,7 @@ else if (jpq1 == "yes")
         {
             Console.WriteLine("");
             Console.WriteLine("After Choosing the left path you start becoming very tired.");
-            Console.WriteLine("Unable to hold back, you fall asleep.");
+            Console.WriteLine("before falling asleep you hear a voice whisper, 'It was their blood'.");
             Console.WriteLine("When you wake up, you realise that all of this was no more than a strange dream.");
             Console.WriteLine("THE END [8/11]");
             Console.WriteLine("Congrats! You got the worst one! (for the player)");
@@ -173,7 +173,7 @@ else if (jpq1 == "yes")
             Console.WriteLine("");
             Console.WriteLine("You go towards the X on the right of the map.");
             Console.WriteLine("After walking for a long time, you look back to realise that you are still at the hut.");
-            Console.WriteLine("You got stuck in a loop.");
+            Console.WriteLine("You got stuck in a loop, but you think that it must be powered by something.");
             Console.WriteLine("THE END [9/11]");
             Console.WriteLine("There doesn't always have to be a good ending.");
         }
@@ -191,8 +191,9 @@ else if (jpq1 == "yes")
         else if (jpq3 == "stay")
         {
             Console.WriteLine("");
-            Console.WriteLine("You stay in the hut.");
-            Console.WriteLine("I disapprove of this choice.");
+            Console.WriteLine("You stay in the hut and discover a list of all the people that have stayed there.");
+            Console.WriteLine("The names somehow seem familier to you.");
+            Console.WriteLine("Shortly after, you start bleeding heavily before passing out.");
             Console.WriteLine("THE END [11/11]");
             Console.WriteLine("Congrats! you got the worst one! (for the character)");
         }
