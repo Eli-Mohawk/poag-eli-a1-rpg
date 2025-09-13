@@ -1,5 +1,9 @@
 ﻿// Displays the title at the top of the console
-Console.WriteLine("Welcome to Realmwalker.");
+Console.WriteLine(" ____            _                        _ _             ");
+Console.WriteLine("|  _ \\ ___  __ _| |_ __ _____      ____ _| | | _____ _ __ ");
+Console.WriteLine("| |_) / _ \\/ _` | | '_ ` _ \\ \\ /\\ / / _` | | |/ / _ \\ '__|");
+Console.WriteLine("|  _ <  __/ (_| | | | | | | \\ V  V / (_| | |   <  __/ |   ");
+Console.WriteLine("|_| \\_\\___|\\__,_|_|_| |_| |_|\\_/\\_/ \\__,_|_|_|\\_\\___|_|   ");
 Console.WriteLine("");
 Console.WriteLine("----------------------------------");
 
@@ -163,10 +167,9 @@ else if (jpq1 == "yes")
         {
             Console.WriteLine("");
             Console.WriteLine("After Choosing the left path you start becoming very tired.");
-            Console.WriteLine("before falling asleep you hear a voice whisper, 'It was their blood'.");
-            Console.WriteLine("When you wake up, you realise that all of this was no more than a strange dream.");
+            Console.WriteLine("When you wake up, you realise that you are back in the field that you first woke up in.");
             Console.WriteLine("THE END [8/11]");
-            Console.WriteLine("Congrats! You got the worst one! (for the player)");
+            Console.WriteLine("Do you walk towards the distant town?");
         }
         else if (jpq3 == "right")
         {
