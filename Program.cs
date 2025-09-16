@@ -1,4 +1,5 @@
-﻿Console.WriteLine(" ____            _                        _ _             ");
+﻿// displays the title
+Console.WriteLine(" ____            _                        _ _             ");
 Console.WriteLine("|  _ \\ ___  __ _| |_ __ _____      ____ _| | | _____ _ __ ");
 Console.WriteLine("| |_) / _ \\/ _` | | '_ ` _ \\ \\ /\\ / / _` | | |/ / _ \\ '__|");
 Console.WriteLine("|  _ <  __/ (_| | | | | | | \\ V  V / (_| | |   <  __/ |   ");
@@ -6,6 +7,7 @@ Console.WriteLine("|_| \\_\\___|\\__,_|_|_| |_| |_|\\_/\\_/ \\__,_|_|_|\\_\\___|
 Console.WriteLine("");
 Console.WriteLine("----------------------------------");
 
+// displays the intro lore :O
 Console.WriteLine("You wake up to find yourself in a massive empty field.");
 Console.WriteLine("Far into the distance you can just barely see what looks to be a town.");
 Console.WriteLine("Do you walk towards the distant town?");
@@ -20,9 +22,9 @@ if (journey1 == "no")
     Console.WriteLine("THE END [1/11]");
     Console.WriteLine("Congrats! You got the worst one! (for the story)");
 }
+// after this the game splits into two paths depending on if you chose stay or continue.
 else if (journey1 == "yes")
 {
-    
     Console.WriteLine("");
     Console.WriteLine("You decide to travel to the distant town. After several hours, you finally reach it.");
     Console.WriteLine("When you arive, you notice that there are no people to be found. After checking multiple homes, you realise that ");
@@ -146,6 +148,7 @@ else if (journey1 == "yes")
             Console.WriteLine("Learn how to type and try again");
         }
     }
+    // after this question, the game splits into 4 paths that give different endings.
     else if (journey2 == "continue")
     {
         Console.WriteLine("");
