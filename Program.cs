@@ -1,7 +1,4 @@
-﻿using System.Data.SqlTypes;
-using System.Reflection.Metadata;
-
-Console.WriteLine(" ____            _                        _ _             ");
+﻿Console.WriteLine(" ____            _                        _ _             ");
 Console.WriteLine("|  _ \\ ___  __ _| |_ __ _____      ____ _| | | _____ _ __ ");
 Console.WriteLine("| |_) / _ \\/ _` | | '_ ` _ \\ \\ /\\ / / _` | | |/ / _ \\ '__|");
 Console.WriteLine("|  _ <  __/ (_| | | | | | | \\ V  V / (_| | |   <  __/ |   ");
