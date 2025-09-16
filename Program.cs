@@ -15,7 +15,6 @@ Console.WriteLine("Do you walk towards the distant town?");
 Console.WriteLine("Type [yes] or [no]:");
 
 String journey1 = Console.ReadLine();
-//bool bJourney = bool.Parse
 if (journey1 == "no")
 {
     Console.WriteLine("");
