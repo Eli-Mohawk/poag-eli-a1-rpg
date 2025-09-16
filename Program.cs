@@ -1,4 +1,6 @@
-﻿// Displays the title at the top of the console
+﻿using System.Data.SqlTypes;
+using System.Reflection.Metadata;
+
 Console.WriteLine(" ____            _                        _ _             ");
 Console.WriteLine("|  _ \\ ___  __ _| |_ __ _____      ____ _| | | _____ _ __ ");
 Console.WriteLine("| |_) / _ \\/ _` | | '_ ` _ \\ \\ /\\ / / _` | | |/ / _ \\ '__|");
@@ -7,17 +9,14 @@ Console.WriteLine("|_| \\_\\___|\\__,_|_|_| |_| |_|\\_/\\_/ \\__,_|_|_|\\_\\___|
 Console.WriteLine("");
 Console.WriteLine("----------------------------------");
 
-// Displays the current story information and the options to move on
 Console.WriteLine("You wake up to find yourself in a massive empty field.");
 Console.WriteLine("Far into the distance you can just barely see what looks to be a town.");
 Console.WriteLine("Do you walk towards the distant town?");
 Console.WriteLine("Type [yes] or [no]:");
 
-// If statements that control how the story progresses based on the choices made by the player
-// Variable that takes what the user inputs and progresses the story accordingly
-String jpq1 = Console.ReadLine();
-// If statement directs the story in a set direction based on the answer the user inputed (similar for all instances in this program)
-if (jpq1 == "no")
+String journey1 = Console.ReadLine();
+//bool bJourney = bool.Parse
+if (journey1 == "no")
 {
     Console.WriteLine("");
     Console.WriteLine("You decide not to travel to the town because it's to far away.");
@@ -25,8 +24,7 @@ if (jpq1 == "no")
     Console.WriteLine("THE END [1/11]");
     Console.WriteLine("Congrats! You got the worst one! (for the story)");
 }
-// The alternative story directions for if the user doesn't do the one listed in the if statement (similar for all instances in this program)
-else if (jpq1 == "yes")
+else if (journey1 == "yes")
 {
     
     Console.WriteLine("");
@@ -38,8 +36,8 @@ else if (jpq1 == "yes")
     Console.WriteLine("Will you stay in the town or will you continue your journey?");
     Console.WriteLine("Type [stay] or [continue]:");
 
-    String jpq2 = Console.ReadLine();
-    if (jpq2 == "stay")
+    String journey2 = Console.ReadLine();
+    if (journey2 == "stay")
     {
         Console.WriteLine("");
         Console.WriteLine("You decide to stay in the town for a while.");
@@ -47,31 +45,31 @@ else if (jpq1 == "yes")
         Console.WriteLine("or if you should continue travelling.");
         Console.WriteLine("Type [stay] or [continue]:");
 
-        String hpq1 = Console.ReadLine();
-        if (hpq1 == "stay")
+        String hermit1 = Console.ReadLine();
+        if (hermit1 == "stay")
         {
             Console.WriteLine("");
             Console.WriteLine("You decide to wait a while longer. The town is running low on supplies, and still, no one has come.");
             Console.WriteLine("You are once again wondering if you should stay or continue on your original journey.");
             Console.WriteLine("Type [stay] or [continue]:");
 
-            String hpq2 = Console.ReadLine();
-            if (hpq2 == "stay")
+            String hermit2 = Console.ReadLine();
+            if (hermit2 == "stay")
             {
                 Console.WriteLine("");
                 Console.WriteLine("You decide that you will stay in the abandoned town for as long as you are able.");
                 Console.WriteLine("After a few days, the towns supplies have run out. Will you Leave or Stay?");
                 Console.WriteLine("Type [stay] or [continue]:");
 
-                String hpq3 = Console.ReadLine();
-                if (hpq3 == "stay")
+                String hermit3 = Console.ReadLine();
+                if (hermit3 == "stay")
                 {
                     Console.WriteLine("");
                     Console.WriteLine("You made your choice...");
                     Console.WriteLine("THE END [2/11]");
                     Console.WriteLine("Was this ending good, or bad?");
                 }
-                else if (hpq3 == "continue")
+                else if (hermit3 == "continue")
                 {
                     Console.WriteLine("");
                     Console.WriteLine("You finally decide to continue your journey, but it's to late.");
@@ -79,14 +77,13 @@ else if (jpq1 == "yes")
                     Console.WriteLine("THE END [3/11]");
                     Console.WriteLine("You shouldn't have stayed so long.");
                 }
-                // Incase the user incorrectly responds, this will prevent the program from glitching (same for all else statements in this program)
                 else
                 {
                     Console.WriteLine("");
                     Console.WriteLine("Learn how to type and try again");
                 }
             }
-            else if (hpq2 == "continue")
+            else if (hermit2 == "continue")
             {
                 Console.WriteLine("");
                 Console.WriteLine("You finally decide to leave the town.");
@@ -102,27 +99,27 @@ else if (jpq1 == "yes")
                 Console.WriteLine("Learn how to type and try again");
             }
         }
-        else if (hpq1 == "continue")
+        else if (hermit1 == "continue")
         {
             Console.WriteLine("");
             Console.WriteLine("You feel that moving on is the best choice. Don't want to get to comfortable.");
             Console.WriteLine("Hours pass, but you still haven't seen anything other than grass. You are beginning to wonder if you should continue.");
             Console.WriteLine("Type [continue] or [return]:");
             
-            String hpq2b = Console.ReadLine();
-            if (hpq2b == "continue")
+            String hermit2b = Console.ReadLine();
+            if (hermit2b == "continue")
             {
                 Console.WriteLine("You travel for a long time, but it seems like you arent making any progress.");
                 Console.WriteLine("Type [walk] or [look]");
 
-                String hpq3b = Console.ReadLine();
-                if (hpq3b == "walk")
+                String hermit3b = Console.ReadLine();
+                if (hermit3b == "walk")
                 {
                     Console.WriteLine("You continue walking, hoping that you aren't going in circles.");
                     Console.WriteLine("THE END [5/11]");
                     Console.WriteLine("Will you ever look behind you? Or can you not handle the truth.");
                 }
-                else if (hpq3b == "look")
+                else if (hermit3b == "look")
                 {
                     Console.WriteLine("You look behind you. The town is only a few minutes of walking away.");
                     Console.WriteLine("You're in a loop.");
@@ -135,7 +132,7 @@ else if (jpq1 == "yes")
                     Console.WriteLine("Learn how to type and try again");
                 }
             }
-            else if (hpq2b == "return")
+            else if (hermit2b == "return")
             {
                 Console.WriteLine("You decide to make your way back to the town. Maybe you can get more food.");
                 Console.WriteLine("THE END [7/11]");
@@ -153,7 +150,7 @@ else if (jpq1 == "yes")
             Console.WriteLine("Learn how to type and try again");
         }
     }
-    else if (jpq2 == "continue")
+    else if (journey2 == "continue")
     {
         Console.WriteLine("");
         Console.WriteLine("You decide that you should take the chance and continue travelling.");
@@ -162,8 +159,8 @@ else if (jpq1 == "yes")
         Console.WriteLine("After arriving at the hut, you find a map. The map has three X's on it.");
         Console.WriteLine("Type [left], [right], [bottom], or [stay]:");
 
-        String jpq3 = Console.ReadLine();
-        if (jpq3 == "left")
+        String journey3 = Console.ReadLine();
+        if (journey3 == "left")
         {
             Console.WriteLine("");
             Console.WriteLine("After Choosing the left path you start becoming very tired.");
@@ -171,7 +168,7 @@ else if (jpq1 == "yes")
             Console.WriteLine("THE END [8/11]");
             Console.WriteLine("Do you walk towards the distant town?");
         }
-        else if (jpq3 == "right")
+        else if (journey3 == "right")
         {
             Console.WriteLine("");
             Console.WriteLine("You go towards the X on the right of the map.");
@@ -180,7 +177,7 @@ else if (jpq1 == "yes")
             Console.WriteLine("THE END [9/11]");
             Console.WriteLine("There doesn't always have to be a good ending.");
         }
-        else if (jpq3 == "bottom")
+        else if (journey3 == "bottom")
         {
             Console.WriteLine("");
             Console.WriteLine("You follow the map towards the bottom X. When you reach the spot, you find a hatch in the ground.");
@@ -191,7 +188,7 @@ else if (jpq1 == "yes")
             Console.WriteLine("THE END [10/11}");
             Console.WriteLine("Wow, that's creepy.");
         }
-        else if (jpq3 == "stay")
+        else if (journey3 == "stay")
         {
             Console.WriteLine("");
             Console.WriteLine("You stay in the hut and discover a list of all the people that have stayed there.");
