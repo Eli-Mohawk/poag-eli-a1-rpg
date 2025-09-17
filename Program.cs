@@ -1,4 +1,4 @@
-﻿// displays the title
+﻿// displays the title (it looks wierd rn but it works)
 Console.WriteLine(" ____            _                        _ _             ");
 Console.WriteLine("|  _ \\ ___  __ _| |_ __ _____      ____ _| | | _____ _ __ ");
 Console.WriteLine("| |_) / _ \\/ _` | | '_ ` _ \\ \\ /\\ / / _` | | |/ / _ \\ '__|");
@@ -17,10 +17,38 @@ String journey1 = Console.ReadLine();
 if (journey1 == "no")
 {
     Console.WriteLine("");
-    Console.WriteLine("You decide not to travel to the town because it's to far away.");
-    Console.WriteLine("After sitting in the same spot that you woke at for several days, you die.");
-    Console.WriteLine("THE END [1/11]");
-    Console.WriteLine("Congrats! You got the worst one! (for the story)");
+    Console.WriteLine("You decide not to travel to the town due to its distance.");
+    Console.WriteLine("How long do you want to stay at the place you woke up at?");
+    Console.WriteLine("Type the number of hours you want to stay for.");
+
+    // turns the number string into a real number for conversion into days if you choose 24 or more hours
+    String hours = Console.ReadLine();
+    float hoursNumber = float.Parse(hours);
+    float daysNumber = hoursNumber / 24;
+
+    if (hoursNumber < 24)
+    {
+        Console.WriteLine("");
+        Console.WriteLine($"You decide to relax in the field for {hoursNumber} hour(s).");
+        Console.WriteLine("");
+        Console.WriteLine($"After the {hoursNumber} hour(s) passed, you fall asleep.");
+        Console.WriteLine("You inhaled a toxic chemical produced by the flowers while sleeping.");
+        Console.WriteLine("THE END [0.5/11]");
+        Console.WriteLine("Your choice was an illusion.");
+    }
+    else if (hoursNumber >= 24)
+    { 
+        Console.WriteLine("");
+        Console.WriteLine($"You decide to relax in the field for {daysNumber} day(s).");
+        Console.WriteLine("");
+        Console.WriteLine($"During your {daysNumber} day(s) of waiting, you starve.");
+        Console.WriteLine("THE END [1/11]");
+        Console.WriteLine("Your choice was an illusion, and you still chose wrong.");
+    }
+    else
+    {
+        Console.WriteLine("So lazy you can't even type correctly... Shameful.");
+    }
 }
 // after this the game splits into two paths depending on if you chose stay or continue.
 else if (journey1 == "yes")
@@ -103,7 +131,7 @@ else if (journey1 == "yes")
             Console.WriteLine("You feel that moving on is the best choice. Don't want to get to comfortable.");
             Console.WriteLine("Hours pass, but you still haven't seen anything other than grass. You are beginning to wonder if you should continue.");
             Console.WriteLine("Type [continue] or [return]:");
-            
+
             String hermit2b = Console.ReadLine();
             if (hermit2b == "continue")
             {
