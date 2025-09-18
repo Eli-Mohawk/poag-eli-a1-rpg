@@ -7,8 +7,24 @@ Console.WriteLine("|_| \\_\\___|\\__,_|_|_| |_| |_|\\_/\\_/ \\__,_|_|_|\\_\\___|
 Console.WriteLine("");
 Console.WriteLine("----------------------------------");
 
-// displays the intro lore :O
+// asks for the players name for a later ending
+Console.WriteLine("Before we begin, please type your name below.");
+String userName = Console.ReadLine();
+Console.WriteLine("");
+Console.WriteLine($"Thank you {userName}, the game will begin shortly.");
+
+// displays the intro lore after a breif pause
+Console.WriteLine("");
+Thread.Sleep(1250);
+Console.WriteLine("3");
+Thread.Sleep(1250);
+Console.WriteLine("2");
+Thread.Sleep(1250);
+Console.WriteLine("1");
+Thread.Sleep(1250);
+Console.WriteLine("");
 Console.WriteLine("You wake up to find yourself in a massive empty field.");
+Console.WriteLine("You wonder how you got here, but realise it's not important right now.");
 Console.WriteLine("Far into the distance you can just barely see what looks to be a town.");
 Console.WriteLine("Do you walk towards the distant town?");
 Console.WriteLine("Type [yes] or [no]:");
@@ -93,13 +109,12 @@ else if (journey1 == "yes")
                     Console.WriteLine("");
                     Console.WriteLine("You made your choice...");
                     Console.WriteLine("THE END [2/11]");
-                    Console.WriteLine("Was this ending good, or bad?");
+                    Console.WriteLine("You made your choice.");
                 }
                 else if (hermit3 == "continue")
                 {
                     Console.WriteLine("");
                     Console.WriteLine("You finally decide to continue your journey, but it's to late.");
-                    Console.WriteLine("You died...");
                     Console.WriteLine("THE END [3/11]");
                     Console.WriteLine("You shouldn't have stayed so long.");
                 }
@@ -116,7 +131,7 @@ else if (journey1 == "yes")
                 Console.WriteLine("You continue travelling for a long time, but never find another town.");
                 Console.WriteLine("Eventually, you starve.");
                 Console.WriteLine("THE END [4/11]");
-                Console.WriteLine("Alone when you woke, and alone when you return to sleep.");
+                Console.WriteLine("But is this truely the end?.");
 
             }
             else
@@ -135,22 +150,25 @@ else if (journey1 == "yes")
             String hermit2b = Console.ReadLine();
             if (hermit2b == "continue")
             {
-                Console.WriteLine("You travel for a long time, but it seems like you arent making any progress.");
+                Console.WriteLine("");
+                Console.WriteLine("You travel for a long time, but it feels like you have been going around in circles.");
                 Console.WriteLine("Type [walk] or [look]");
 
                 String hermit3b = Console.ReadLine();
                 if (hermit3b == "walk")
                 {
-                    Console.WriteLine("You continue walking, hoping that you aren't going in circles.");
+                    Console.WriteLine("");
+                    Console.WriteLine("You continue walking, and walking, and walking.");
                     Console.WriteLine("THE END [5/11]");
-                    Console.WriteLine("Will you ever look behind you? Or can you not handle the truth.");
+                    Console.WriteLine("Step, step, step, step, step, step, step, step, step, step. It never ends.");
                 }
                 else if (hermit3b == "look")
                 {
+                    Console.WriteLine("");
                     Console.WriteLine("You look behind you. The town is only a few minutes of walking away.");
                     Console.WriteLine("You're in a loop.");
                     Console.WriteLine("THE END [6/11]");
-                    Console.WriteLine("Did you escape, or are you trapped forever?");
+                    Console.WriteLine("You should have left while it was deactivated.");
                 }
                 else
                 {
@@ -160,9 +178,10 @@ else if (journey1 == "yes")
             }
             else if (hermit2b == "return")
             {
+                Console.WriteLine("");
                 Console.WriteLine("You decide to make your way back to the town. Maybe you can get more food.");
                 Console.WriteLine("THE END [7/11]");
-                Console.WriteLine("I wonder if you ever got that food.");
+                Console.WriteLine("It would have been faster to stay there from the start.");
             }
             else
             {
@@ -187,42 +206,46 @@ else if (journey1 == "yes")
         Console.WriteLine("Type [left], [right], [bottom], or [stay]:");
 
         String journey3 = Console.ReadLine();
+        // 
         if (journey3 == "left")
         {
             Console.WriteLine("");
-            Console.WriteLine("After Choosing the left path you start becoming very tired.");
-            Console.WriteLine("When you wake up, you realise that you are back in the field that you first woke up in.");
-            Console.WriteLine("THE END [8/11]");
+            Console.WriteLine("After walking towards the X to the left, you start becoming very tired.");
+            Console.WriteLine("You wake up to find yourself in a massive empty field.");
+            Console.WriteLine("You wonder how you got here, but realise it's not important right now.");
+            Console.WriteLine("Far into the distance you can just barely see what looks to be a town.");
             Console.WriteLine("Do you walk towards the distant town?");
+            Console.WriteLine("THE END [8/11]");
+            Console.WriteLine("'I feel like I've forgotten something important.'");
         }
         else if (journey3 == "right")
         {
             Console.WriteLine("");
             Console.WriteLine("You go towards the X on the right of the map.");
-            Console.WriteLine("After walking for a long time, you look back to realise that you are still at the hut.");
-            Console.WriteLine("You got stuck in a loop, but you think that it must be powered by something.");
+            Console.WriteLine("After walking for a long time, you look back to realise that you are still very close to the hut.");
+            Console.WriteLine("You've been trapped in a loop.");
             Console.WriteLine("THE END [9/11]");
-            Console.WriteLine("There doesn't always have to be a good ending.");
+            Console.WriteLine("For some reason, it seems like the loop is being powered by something.");
         }
         else if (journey3 == "bottom")
         {
             Console.WriteLine("");
             Console.WriteLine("You follow the map towards the bottom X. When you reach the spot, you find a hatch in the ground.");
-            Console.WriteLine("After opening the hatch, you discover a large library with many books.");
-            Console.WriteLine("You look through several books, but are confused as to why they are all about seemingly random people.");
-            Console.WriteLine("When you finally realise that each person is said to be missing, you connect the dots.");
-            Console.WriteLine("These people are the residents of the abandoned town.");
+            Console.WriteLine("After opening the hatch, you discover a room with many books. You can count 213, but there is an empty space for one more.");
+            Console.WriteLine("You skim through one of the books titled 'Matt Burton'. It seems to be full of information about this persons life.");
+            Console.WriteLine("After checking several other books, you realise that they are all about different people's lives.");
+            Console.WriteLine("Shortly after, you feel a sharp pain and start bleeding heavily as the world fades to black.");
             Console.WriteLine("THE END [10/11}");
-            Console.WriteLine("Wow, that's creepy.");
+            Console.WriteLine("If those people are real, it would be almost enough to fill a town.");
         }
         else if (journey3 == "stay")
         {
             Console.WriteLine("");
-            Console.WriteLine("You stay in the hut and discover a list of all the people that have stayed there.");
-            Console.WriteLine("The names somehow seem familier to you.");
-            Console.WriteLine("Shortly after, you start bleeding heavily before passing out.");
+            Console.WriteLine("You stay in the hut and discover a list with 213 different names.");
+            Console.WriteLine("The names somehow seem familier to you, like you used to know them.");
+            Console.WriteLine("Shortly after, you feel a sharp pain and start bleeding heavily as the world fades to black.");
             Console.WriteLine("THE END [11/11]");
-            Console.WriteLine("Congrats! you got the worst one! (for the character)");
+            Console.WriteLine($"'{userName} has been added to the list. That makes 214/214.'");
         }
         else
         {
