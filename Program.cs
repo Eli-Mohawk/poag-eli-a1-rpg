@@ -15,13 +15,13 @@ Console.WriteLine($"Thank you {userName}, the game will begin shortly.");
 
 // displays the intro lore after a breif pause
 Console.WriteLine("");
-Thread.Sleep(1250);
+Thread.Sleep(1000);
 Console.WriteLine("3");
-Thread.Sleep(1250);
+Thread.Sleep(1000);
 Console.WriteLine("2");
-Thread.Sleep(1250);
+Thread.Sleep(1000);
 Console.WriteLine("1");
-Thread.Sleep(1250);
+Thread.Sleep(1000);
 Console.WriteLine("");
 Console.WriteLine("You wake up to find yourself in a massive empty field.");
 Console.WriteLine("You wonder how you got here, but realise it's not important right now.");
